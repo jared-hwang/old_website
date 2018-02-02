@@ -1,0 +1,42 @@
+
+body {
+	background-color: #262931;
+	font-family: "Trebuchet MS";
+	color: white;
+	margin: 30px;
+	line-height: 1.5;
+	font-size: 18px;
+	text-shadow: -4px 2px 0px black;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+h3 {
+	text-indent: 2em;
+}
+
+p, ul {
+	padding-left: 100px
+}
+
+h5, div {
+	text-align: center;
+}
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: gray;
+}
+
+.Date {
+	float: right;
+}
