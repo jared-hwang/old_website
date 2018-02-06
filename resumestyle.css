@@ -3,7 +3,7 @@ body {
 	background-color: #262931;
 	font-family: "Trebuchet MS";
 	color: white;
-	margin: 30px;
+	margin: 4%;
 	line-height: 1.5;
 	font-size: 18px;
 	text-shadow: -4px 2px 0px black;
@@ -23,7 +23,7 @@ h3 {
 }
 
 p, ul {
-	padding-left: 100px
+	padding-left: 5%;
 }
 
 h5, div {
