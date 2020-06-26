@@ -3,20 +3,253 @@
 <html>
 
 <head>
+	<title>Jared Hwang</title>
 	<link rel="stylesheet" href="indexstyle.css">
-	<title>Jared K Hwang</title>
 	<meta charset="utf-8" />
 </head>
 
 <body>
-<div>
-	<h1>Jared K Hwang</h1>
-</div>
-	<p><img src="my_picture.JPG" alt="Headshot of Jared"></p>
-	<h2>Welcome to my website!</h2>
-	<p>You can learn more about me at the following pages:</p>
-	<p><a href="bio.html">My Bio</a></p>
-	<p><a href="resume.html">My Resume</a></p>
-</body>
 
+	<div class='grid-container'>
+
+		<div id='grid-container-left'>
+			<img src='my_picture.JPG' alt='The only half decent picture of me on my computer.' id='me_pic'>
+			<div style='font-size: 35px;'>Jared Hwang</div>
+			<div style='font-size: 18px; margin-top: 5px;'>jared.hwang (at) gmail (dot) com 
+			<br> 
+			<a href="https://github.com/jared-hwang">Github</a></div>
+			<a href="https://www.linkedin.com/in/jared-hwang-90a08312b/">Linkedin</a>
+
+		</div>
+
+		<div id='grid-container-right'>
+
+			<div style="margin-top: 10px;">
+				Welcome! My name is Jared. I recently graduated from <b>Tufts University</b> with a B.S. in
+				<b> Physics </b> and <b> Computer Science</b>. 
+				
+				<p>I'm interested in using machine learning to fundamentally change the way we 
+				approach understanding and interacting with data. </p>
+
+				<p>
+				Take a look at my projects and achievements below.
+			</div>
+			
+			<h2 style="margin-top: 30px;">
+				Research
+			</h3>
+
+			<button type="button" class="collapsible">LArTPC Reconstruction</button>
+			<div class="content">
+
+				<h3>
+					LArTPC Reconstruction with Deep Convolutional Neural Networks, Prof. Taritree Wongjirad, Tufts <br> 2020 - Present
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					Liquid argon time projection chambers (LArTPCs) are type of particle detector often used in neutrino experiments. To fully utilize the 
+					data collected from these detectors, we must reconstruct and identify particle paths through the detector as accurately as possible. 
+					To do that, the Neutrino Group at Tufts explores the use of deep convolutional neural networks to reconstruct particle interactions. More 
+					about the experiment can be seen <a href="https://sites.tufts.edu/nutufts/projects/lartpc-reconstruction-with-deep-convolutional-neural-networks/">here</a>.
+				</p>
+				<p style="margin-left: 40px; width: 60%;">
+					My role in this experiment is to design, prototype, and test a neural net using a new centroid based loss function that will perform
+					instance segmentation on the images collected by the LArTPC, and identify the particles in the interactions of interest. The paper describing
+					the loss function technique can be seen <a href="https://arxiv.org/abs/1906.11109">here</a>.
+				</p>
+				
+				<img src='lartpc.png' alt='LArTPC image' id='lartpc' style="margin-left: 40px;">
+				<div style="margin-left: 40px; font-size: 12px;">An example image of LArtPC output, with interactions highlighted.</div>
+				
+				<img src='instanceseg.png' alt='Instance segmentation' id='instanceseg' style="margin-left: 40px; margin-top: 20px;">
+				<div style="margin-left: 40px; font-size: 12px;">The goal of instance segmentation in our project. Note the shower is missing from the highlight, a problem with the labeling upstream.</div>
+				<br><br>
+			</div>
+
+			<button type="button" class="collapsible" style="margin-top: 10px;">IsoDAR</button>
+			<div class='content'>
+				<h3>
+					IsoDAR (Isotope Decay at Rest Experiment), Prof. Janet Conrad, MIT <br> 2018 - 2020
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					IsoDAR is designed to perform searches for sterile neutrino oscillations and non-standard neutrino interactions. 
+					It does so by accelerating dihydrogen molecules through a <b>radio frequency quadruple (RFQ)</b>, then a <b>cyclotron</b>, which
+					then impinge onto a beryllium and lithium target, ultimately producing a large amount of antineutrinos which can be
+					studied. More information about the experiment can be found <a href="https://www.nevis.columbia.edu/daedalus/">here</a>, or
+					in <a href="https://arxiv.org/abs/1307.5081">this paper</a>.
+				</p>
+				<p style="margin-left: 40px; width: 60%;">
+					My role in this experiment was to produce an end-to-end simulation package for the RFQ that could:
+					<ul style="margin-left: 40px; width: 60%;">
+						<li>Be modular with previous experiment simulation packages.</li>
+						<li>Accurately simulate a customizable RFQ factoring in space-charge, which other RFQ simulators could not.</li>
+						<li>Be easily instantiated, customized, and fit in with existing simulations.</li>
+						<li>Be able to be parallelized, and have fast performance.</li>
+					</ul>
+				</p>
+				<p style="margin-left: 40px; width: 60%;">
+					All of the above were achieved, producing an RFQ package using the WARP particle-in-cell framework that could easily be used
+					and was ~2x faster, and more accurate than preexisting software. I also included built-in diagnostic tools from scratch, which
+					allowed the user to examine beam quality and other features during, and after the simulation. A paper about the RFQ can be read 
+					<a href="https://arxiv.org/abs/1507.07258">here</a>, and the code can be found <a href="https://github.com/DanielWinklehner/py_rfq_helper">here</a>. 
+				</p>
+				<img src='rfq.gif' alt='RFQ simulation' id='rfq' style="margin-left: 40px;">
+				
+				<div style="margin-left: 40px; font-size: 12px;">An example simulation of the experiment RFQ. Note the acceleration and bunching.</div>
+				<br><br>
+			</div>
+
+
+			<h2 style="margin-top: 30px;">
+				Select Projects
+			</h3>
+
+			<button type="button" class="collapsible">2D/3D Ising Model Simulator</button>
+			<div class='content'>
+				<h3>
+					2D/3D Ising Model Simulator, Tufts University
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					The Ising model is an example of a thermodynamic system, and it is particularly helpful for understanding phase transitions. In our case, 
+					we used it to understand the behavior of magnets under varying temperatures. We implemented an Ising Model simulator in two and three dimensions, 
+					and included tools to change temperature, size, etc. to observe the effect on magnet behavior. More information about the Ising Model can be read <a href="http://stanford.edu/~jeffjar/statmech2/intro4.html">here</a>.
+				</p>
+
+				<img src='ising2d.gif' alt='2D Ising Simulation' id='2dising' style="margin-left: 40px;">
+				<div style="margin-left: 40px; font-size: 12px;">2D Simulation run under the transition temperature. Note the steady magnetization.</div>
+				
+				<img src='ising3d.gif' alt='3D Ising Simulation' id='3dising' style="margin-left: 40px;">
+				<div style="margin-left: 40px; font-size: 12px;">3D Simulation run under the transition temperature. Note the steady magnetization.</div>
+				
+				<br><br>
+			</div>
+
+
+			<button type="button" class="collapsible" style="margin-top: 10px;">Avocado Data Visualization</button>
+			<div class='content'>
+				<h3>
+					Avocado Consumption Data Visualization, Tufts University
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					Using data sourced from the <a href="https://hassavocadoboard.com/">Hass Avocado Board</a>, we created an interactive visualization 
+					showing avocado consumption and price data in 45 cities across the United States, allowing the user to compare different cities with
+					each other and the national average. Also, since people are always telling us millennials that eating avocado toast is the reason we 
+					can't afford things like houses with lawns and cars, we added a calculator to let you see how much avocado toast you'd have to not
+					eat to buy a house! Check out the visualization <a href="https://jessicaxwang.github.io/avocado_vis/">here</a>.
+				</p>
+
+				<a href="https://jessicaxwang.github.io/avocado_vis/">
+					<img src='avocado.png' alt='Avocado Visualization' id='avocado' style="margin-left: 40px;">
+				</a>.
+				<div style="margin-left: 40px; font-size: 12px;">Visualization displaying avocado consumption data. Check out the full vis <a href="https://jessicaxwang.github.io/avocado_vis/">here</a>.</div>
+				
+				<br><br>
+			</div>
+
+
+			<button type="button" class="collapsible" style="margin-top: 10px;">Tweetalyzer</button>
+			<div class='content'>
+				<h3>
+					Tweetalyzer, Tufts University
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					Tweetalyzer was a website that would scrape tweets from a few celebrities, including Donald Trump and local celebrity Security Professor Ming Chow and 
+					generated fake tweets in their style. We developed the neural net using Python Keras, and the web API using Flask. Unfortunately, the code is deprecated so
+					the website can't be run anymore, but the code can be found <a href="https://github.com/jared-hwang/polyhack-2018">here</a>.
+				</p>
+				<br><br>
+			</div>
+
+
+			<h2 style="margin-top: 30px;">
+				Teaching
+			</h3>
+
+			<button type="button" class="collapsible">ARC Tutor</button>
+			<div class='content'>
+				<h3>
+					Academic Resource Center Tutor <br> 2017 - 2018
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					Served as a one-on-one tutor for Physics (Electricity and Magnetism), Math (Differential Equations), and Computer Science (Intro and Data Structures) at Tufts University.
+					More info about the service can be seen <a href="https://students.tufts.edu/academic-advice-and-support/academic-resource-center">here</a>.
+				</p>
+				<br>
+			</div>
+
+			<button type="button" class="collapsible" style="margin-top: 10px;">COMP40 TA</button>
+			<div class='content'>
+				<h3>
+					"Machine Structure and Assembly Language Programming Teaching" Assistant<br> 2018 - 2019
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					Teaching assistant for COMP40 at Tufts University. 
+					<ul style="margin-left: 40px;">
+						<li>Hosted office hours regularly.</li>
+						<li>Graded design documents and exams.</li>
+					</ul>
+				</p>
+				<br>
+			</div>
+
+			<button type="button" class="collapsible" style="margin-top: 10px;">COMP105 TA</button>
+			<div class='content'>
+				<h3>
+					"Programming Languages" Assistant<br> 2020
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					Teaching assistant for COMP105 at Tufts University. 
+					<ul style="margin-left: 40px;">
+						<li>Hosted office hours regularly.</li>
+						<li>Held weekly recitation reviewing course material.</li>
+						<li>Graded homeworks and exams.</li>
+					</ul>
+				</p>
+
+				<br>
+			</div>
+
+
+			<h2 style="margin-top: 30px;">
+				Awards and Acknowledgements
+			</h3>
+
+			<div class='awards'>
+				<ul style="list-style-type:none;">
+				 	<li class='awardspoint'>N. Hobbs Knight Prize Scholarship recognizing excellence in theoretical and experimental physics (Tufts, 2020)</li>
+					<li class='awardspoint'>Sigma Pi Sigma Honor Society (2020 - )</li>
+					<li class='awardspoint'><i>summa cum laude</i> (Tufts, 2020)</li>
+					<li class='awardspoint'>Governing Board Award for Most Improved Japanese (Kyoto Consortium for Japanese Studies, Doshisha University, 2019)</li>
+				</ul>
+			</div>
+
+			<h2 style="margin-top: 30px;">
+				Other fun things
+			</h3>
+
+			<div class='fun'>
+				<ul style="list-style-type:none;">
+				 	<li class='funpoint'>Conversational in Mandarin and Japanese.</li>
+					<li class='funpoint'><a href="https://youtu.be/M-kAljSDzYI"><i>Very</i> old video of me doing a physics demonstration.</a></li>
+					<li class='funpoint'>I've completed a Pokémon <a href="https://bulbapedia.bulbagarden.net/wiki/Living_Pok%C3%A9dex">living dex</a>.</li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<script type='text/javascript' src='script.js'></script>
+
+</body>
 </html>
