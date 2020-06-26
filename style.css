@@ -4,6 +4,11 @@ body {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+head {
+	background: #FCFCF1 ;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 .grid-container {
 	margin-top: 40px;
 	margin-right: 40px;
