@@ -1,6 +1,7 @@
 body {
-	background: cornsilk;
-	font-family: Arial, Helvetica, sans-serif;
+	/* background: cornsilk; */
+	background: #FCFCF1 ;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .grid-container {
