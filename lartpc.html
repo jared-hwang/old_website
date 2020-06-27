@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Jared Hwang</title>
+	<link rel="stylesheet" href="lartpc.css">
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+<div class='grid-container'>
+    <div class="content">
+
+        <h3>
+            LArTPC Reconstruction with Deep Convolutional Neural Networks, Prof. Taritree Wongjirad, Tufts <br> 2020 - Present
+        </h3>
+
+        <p style="margin-left: 40px; width: 60%;">
+            Liquid argon time projection chambers (LArTPCs) are a type of particle detector often used in neutrino experiments. To fully utilize the 
+            data collected from these detectors, we must reconstruct and identify particle paths through the detector as accurately as possible. 
+            To do that, the Neutrino Group at Tufts explores the use of deep convolutional neural networks to reconstruct particle interactions. More 
+            about the experiment can be seen <a href="https://sites.tufts.edu/nutufts/projects/lartpc-reconstruction-with-deep-convolutional-neural-networks/">here</a>.
+        </p>
+        <p style="margin-left: 40px; width: 60%;">
+            My role in this experiment is to design, prototype, and test a neural net using a new centroid based loss function that will perform
+            instance segmentation on the images collected by the LArTPC, and identify the particles in the interactions of interest. The paper describing
+            the loss function technique can be seen <a href="https://arxiv.org/abs/1906.11109">here</a>.
+        </p>
+        
+        <img src='lartpc.png' alt='LArTPC image' id='lartpc' style="margin-left: 40px; width: 50%;">
+        <div style="margin-left: 40px; font-size: 12px;">An example image of LArtPC output, with interactions highlighted.</div>
+        
+        <img src='instanceseg.png' alt='Instance segmentation' id='instanceseg' style="margin-left: 40px; margin-top: 20px; width: 50%;">
+        <div style="margin-left: 40px; font-size: 12px;">The goal of instance segmentation in our project. Note the shower is missing from the highlight, a problem with the labeling upstream.</div>
+        <br><br>
+    </div>
+
+    <a href="index.html">Back</a>
+    <br>
+     
+</div>
+
+
+<script type='text/javascript' src='script.js'></script>
+
+</body>
+</html>
