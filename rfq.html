@@ -19,7 +19,7 @@
 
         <p style="margin-left: 40px; width: 60%;">
             IsoDAR is designed to perform searches for sterile neutrino oscillations and non-standard neutrino interactions. 
-            It does so by accelerating dihydrogen molecules through a <b>radio frequency quadruple (RFQ)</b>, then a <b>cyclotron</b>, which
+            It does so by accelerating dihydrogen molecules through a <b>radio frequency quadruple (RFQ)</b>, then a cyclotron, which
             then impinge onto a beryllium and lithium target, ultimately producing a large amount of antineutrinos which can be
             studied. More information about the experiment can be found <a href="https://www.nevis.columbia.edu/daedalus/">here</a>, or
             in <a href="https://arxiv.org/abs/1307.5081">this paper</a>.
@@ -28,21 +28,31 @@
             My role in this experiment was to produce an end-to-end simulation package for the RFQ that could:
             <ul style="margin-left: 40px; width: 60%;">
                 <li>Be modular with previous experiment simulation packages.</li>
-                <li>Accurately simulate a customizable RFQ factoring in space-charge, which other RFQ simulators could not.</li>
+                <li>Accurately simulate a customizable RFQ factoring in space-charge (charged particles interacting with other particles), which other RFQ simulators could not.</li>
                 <li>Be easily instantiated, customized, and fit in with existing simulations.</li>
                 <li>Be able to be parallelized, and have fast performance.</li>
             </ul>
         </p>
         <p style="margin-left: 40px; width: 60%;">
-            All of the above were achieved, producing an RFQ package using the WARP particle-in-cell framework that could easily be used
-            and was ~2x faster, and more accurate than preexisting software. I also included built-in diagnostic tools from scratch, which
-            allowed the user to examine beam quality and other features during, and after the simulation. A paper about the RFQ can be read 
-            <a href="https://arxiv.org/abs/1507.07258">here</a>, and the code can be found <a href="https://github.com/DanielWinklehner/py_rfq_helper">here</a>. 
+            This involved individually designing and testing the various components of the RFQ mostly from scratch, and then incorporating them
+            into the larger simulation framework. Ultimately, all of the above were achieved, producing an RFQ package, using the WARP particle-in-cell 
+            framework, that could easily be used, was more accurate, flexible, and at least as fast (if not faster) than preexisting software. 
         </p>
         <img src='rfq.gif' alt='RFQ simulation' id='rfq' style="margin-left: 40px; width: 70%;">
         
         <div style="margin-left: 40px; font-size: 12px;">An example simulation of the experiment RFQ. Note the acceleration and bunching.</div>
-        <br><br>
+
+        <p style="margin-left: 40px; width: 60%;">
+            I also implemented built-in diagnostic tools (after realizing that a simulation without interpretable data output wasn't the most helpful), which 
+            allowed the user to examine beam quality and other features (emittance, electric field, etc.) during, and after the simulation, as well as automatic
+            bunch-detection to analyze the properties of a single bunch. 
+            
+            <br><br>
+            In addition, I explored different methods to speed-up the simulation, between different parallelization slicing and adaptive meshing techniques, to mixed results.
+
+            A paper about the RFQ can be read 
+            <a href="https://arxiv.org/abs/1507.07258">here</a>, and the code can be found <a href="https://github.com/DanielWinklehner/py_rfq_helper">here</a>. 
+        </p>
     </div>
 
     <a href="index.html">Back</a>
