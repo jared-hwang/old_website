@@ -14,7 +14,7 @@
     <div class="content">
 
         <h3>
-            LArTPC Reconstruction with Deep Convolutional Neural Networks, Prof. Taritree Wongjirad, Tufts <br> 2020 - Present
+            LArTPC Reconstruction and Compression with Deep Convolutional Neural Networks and Autoencoders, Prof. Taritree Wongjirad, Tufts <br> 2020 - Present
         </h3>
 
         <p style="margin-left: 40px; width: 60%;">
@@ -24,12 +24,24 @@
             about the experiment can be seen <a href="https://sites.tufts.edu/nutufts/projects/lartpc-reconstruction-with-deep-convolutional-neural-networks/">here</a>.
         </p>
         <p style="margin-left: 40px; width: 60%;">
-            My role in this experiment is to prototype and test a neural net using a new centroid based loss function that will perform
+            I had two broad projects in this experiment. The first was to prototype and test a neural net using a new centroid based loss function that would perform
             instance segmentation on the images collected by the LArTPC, and identify the particles in the interactions of interest. This involves
             seamlessy integrating the input/output of the net with the prior-existing framework of simulation data and other neural networks, to maintain
-            consistency and to ensure that it is future-proofed for differences in detector simulations and data structure. 
+            consistency and to ensure that it is future-proofed for differences in detector simulations and data structure.
             
             The paper describing the loss function technique can be seen <a href="https://arxiv.org/abs/1906.11109">here</a>.
+
+        </p>
+        <p style="margin-left: 40px; width: 60%;">
+            The second project was to design and implement a method of compressing the images, as finding a way to compress the terabytes per second of data (saved to disk)
+            produced by the detectors was important for cost and convenient analysis. To do this, we used a VQVAE (Vector Quantized Variational Autoencoder), a type of autoencoder, to learn a latent space, 
+            transform the images into vectors in the latent space using a learned encoder, and then reconstruct the vectors back into images using a learned decoder. The vectors in the latent space are much 
+            smaller than the images themselves, so storing the vectors and the learned VQVAE model can lead to much less used disk space in total.
+
+            To do this, I first designed and implemented a PyTorch dataset class that took full-size LArTPC images and tiled them into sizes that the VQVAE networks could accept, as well
+            as stitched together the eventual reconstructed tiles. Then, I implemented the wrapper to train and use the VQVAE compression tool. In the end, depending on the core VQVAE architecture used, 
+            we could achieve up to an 80% reduction in file size compared to traditional JPEG compression methods. See below for images of the VQVAE reconstructions.
+
         </p>
         
         <img src='lartpc.png' alt='LArTPC image' id='lartpc' style="margin-left: 40px; width: 60%;">
@@ -37,6 +49,9 @@
         
         <img src='instanceseg.png' alt='Instance segmentation' id='instanceseg' style="margin-left: 40px; margin-top: 20px; width: 60%;">
         <div style="margin-left: 40px; font-size: 12px;">The goal of instance segmentation in our project. Note the shower is missing from the highlight, a problem with the labeling upstream.</div>
+        
+        <img src='reconstructedtiles.png' alt='VQVAE reconstructions' id='reconstructed' style="margin-left: 40px; width: 60%;">
+        <div style="margin-left: 40px; font-size: 12px;">An example of tiles compressed and reconstructed using the VQVAE. Top is the original images, bottom is the reconstructed.</div>
         <br><br>
     </div>
 
