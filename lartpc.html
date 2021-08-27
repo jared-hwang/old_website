@@ -38,7 +38,7 @@
             transform the images into vectors in the latent space using a learned encoder, and then reconstruct the vectors back into images using a learned decoder. The vectors in the latent space are much 
             smaller than the images themselves, so storing the vectors and the learned VQVAE model can lead to much less used disk space in total.
         </p>
-        <p>
+        <p style="margin-left: 40px; width: 60%;">
             To do this, I first designed and implemented a PyTorch dataset class that took full-size LArTPC images and tiled them into sizes that the VQVAE networks could accept, as well
             as stitched together the eventual reconstructed tiles. Then, I implemented the wrapper to train and use the VQVAE compression tool. In the end, depending on the core VQVAE architecture used, 
             we could achieve up to an 80% reduction in file size compared to traditional JPEG compression methods. See below for images of the VQVAE reconstructions.
