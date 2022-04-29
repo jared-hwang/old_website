@@ -127,7 +127,32 @@
 
 			<h2 style="margin-top: 30px;">
 				Select Projects
-			</h3>
+			</h3>			
+			
+			<button type="button" class="collapsible">Simulation Inference on Urban Traffic Simulations</button>
+			<div class='content'>
+				<h3>
+					Simulation Inference on Urban Traffic Simulations, USC
+				</h3>
+
+				<p style="margin-left: 40px; width: 60%;">
+					Good urban planning can have a massive impact on human health, climate change, and social equity. In this project, we wanted to show that inference
+					techniques typically used to develop statistical models can also be applied to simulations developed for urban planning. We used 
+					<a href="https://arxiv.org/abs/1605.06376">Bayesian conditional density estimation</a> on <a href="https://github.com/a-b-street/abstreet">A/B Street</a>,
+					a traffic simulation tool, to measure correlations between the traffic light timings of a singular, high throughput intersection in the Seattle Montlake area 
+					on the trip times in the larger area. We found that shorter stage delays (time that certain lanes have the right to drive through) are correlated with higher 
+					traffic throughput, to a certain point, but that extensions to these delays still play an important role. For more details on the project, see 
+					<a href="https://github.com/jared-hwang/UrbanInference"> the github page</a>.
+				</p>
+
+				<img src='traffic_sim.gif' alt='A/B Street' id='abstreet' style="margin-left: 40px;">
+				<div style="margin-left: 40px; font-size: 12px;">An example of the A/B Street simulation GUI. Traffic lane types, light timings, and others are changeable within the simulation.</div>
+				
+				<img src='simulationinference.png' alt='Simulation Inference' id='siminference' style="margin-left: 40px;">
+				<div style="margin-left: 40px; font-size: 12px;">The simulation inference pipeline.</div>
+				
+				<br><br>
+			</div>
 
 			<button type="button" class="collapsible">2D/3D Ising Model Simulator</button>
 			<div class='content'>
