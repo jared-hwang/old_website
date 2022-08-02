@@ -18,3 +18,7 @@ head {
     position: absolute;
     left: 20%
 }
+
+ul {
+    list-style-position: outside;
+ }
