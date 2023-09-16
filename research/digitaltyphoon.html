@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Jared Hwang</title>
+	<link rel="stylesheet" href="digitaltyphoon.css">
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+<div class='grid-container'>
+    <div class="content">
+
+        <h3>
+            Machine Learning for the Digital Typhoon Dataset <br> Prof. Asanobu Kitamoto, National Institute of Informatics, 2023
+        </h3>
+
+        <p style="margin-left: 40px; width: 60%;">
+            The Digital Typhoon Project was started in 1997, and aims to collect, standardize, and make accessible satellite images 
+            of typhoons over the Western North Pacific. It hopes to reduce the burden of researchers to start machine learning on tropical cyclones without solid
+            domain knowledge of meteorology and satellite remote sensing.
+        </p>
+
+        <img src='../resources/typhoon/typhoon_overview.png' alt='Typhoon Projection Overview' id='typhoon' style="margin-left: 40px; width: 60%;">
+        <div style="margin-left: 40px; font-size: 12px;">An overview of the dataset and projection of globe images to 2D.</div>
+        
+        <p style="margin-left: 40px; width: 60%;">
+           I developed Pyphoon2, a PyTorch based dataloader to easily access, filter, and transform dataset images for use in machine learning applications. You can read more and 
+           find the code <a href="https://github.com/kitamoto-lab/pyphoon2">here.</a>
+        </p>
+
+        <img src='../resources/typhoon/typhoon_data_dir_structure.png' alt='Overview of the dataset structure' id='typhoon' style="margin-left: 40px; width: 60%;">
+        <div style="margin-left: 40px; font-size: 12px;">Overview of the dataset structure</div>
+        
+        <p style="margin-left: 40px; width: 60%;">
+            I also led the benchmark experiments for the dataset, including classification and regression of typhoon intensity (wind and pressure), as well as forecasting 
+            typhoon intensity and shape.    
+        </p>
+
+        <p style="margin-left: 40px; width: 60%;">
+            This work was submitted to NeuRIPS 2023, and is currently in review. You can read more about the project and browse the dataset <a href="http://agora.ex.nii.ac.jp/digital-typhoon/">at the official website.</a>
+        </p>
+        
+    </div>
+
+    <a href="../index.html">Back</a>
+    <br>
+
+</div>
+
+
+<script type='text/javascript' src='script.js'></script>
+
+</body>
+</html>
